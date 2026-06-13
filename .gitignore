@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+
+# Compiled binaries
+backend/diff_engine.exe
+*.exe
+*.o
+*.obj
+
+# Temporary files
+backend/temp/
+backend/temp/*
+temp/
+*.log
+
+# Editor/OS/Build files
+.DS_Store
+.vscode/
+.idea/
+frontend/dist/
+frontend/dev/
