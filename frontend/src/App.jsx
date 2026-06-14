@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import DiffViewer from "./components/DiffViewer";
 import ASTDiffViewer from "./components/ASTDiffViewer";
+import ComplexityViewer from "./components/ComplexityViewer";
 
 const API_BASE = "http://localhost:5000/api";
 
@@ -150,6 +151,8 @@ export default function App() {
       const res = await fetch(`${API_BASE}/history`);
       if (!res.ok) throw new Error("Failed to load history");
       const data = await res.json();
+      console.log("ALGO =", data.algorithm);
+      console.log(data);
       setHistory(data);
     } catch (err) {
       console.error("Error loading history:", err);
@@ -175,7 +178,9 @@ export default function App() {
       }
 
       const data = await res.json();
-      setDiffResult(data.diffResult ? data : { algorithm, diffResult: data }); // handle fallback format
+      console.log("ALGO =", data.algorithm);
+      console.log(JSON.stringify(data, null, 2));
+      setDiffResult(data); // handle fallback format
       setActiveHistoryId(data._id);
 
       // Reload history to show this new comparison in list
@@ -195,6 +200,8 @@ export default function App() {
       const res = await fetch(`${API_BASE}/history/${id}`);
       if (!res.ok) throw new Error("Failed to fetch comparison details");
       const data = await res.json();
+      console.log("ALGO =", data.algorithm);
+      console.log(data);
 
       setTitle(data.title);
       setAlgorithm(data.algorithm);
@@ -257,11 +264,17 @@ export default function App() {
           <span className="algo-pill" style={{ color: "var(--accent-purple)" }}>
             Myers
           </span>
+
           <span className="algo-pill" style={{ color: "var(--accent-cyan)" }}>
             Histogram
           </span>
+
           <span className="algo-pill" style={{ color: "var(--accent-yellow)" }}>
             GumTree
+          </span>
+
+          <span className="algo-pill" style={{ color: "#22c55e" }}>
+            Complexity Comparision
           </span>
         </div>
       </header>
@@ -448,6 +461,7 @@ export default function App() {
                 <option value="gumtree">
                   GumTree Diff (AST-based - Structural)
                 </option>
+                <option value="complexity">Complexity Comparison</option>
               </select>
             </div>
 
@@ -595,7 +609,9 @@ export default function App() {
 
           {!loading && diffResult && (
             <>
-              {diffResult.algorithm === "gumtree" ? (
+              {diffResult.algorithm === "complexity" ? (
+                <ComplexityViewer data={diffResult} />
+              ) : diffResult.algorithm === "gumtree" ? (
                 <ASTDiffViewer
                   diffResult={diffResult.diffResult || diffResult}
                 />
