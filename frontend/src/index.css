@@ -395,6 +395,12 @@ body {
     color: var(--text-main);
 }
 
+.btn-secondary.active {
+    background: #8b5cf6;
+    border-color: #8b5cf6;
+    color: white;
+}
+
 .btn-secondary:hover {
     background: var(--glass-hover);
     border-color: rgba(255, 255, 255, 0.2);
