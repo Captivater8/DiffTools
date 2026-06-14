@@ -344,16 +344,6 @@ using the Complexity Comparison dashboard.
 
 ---
 
-## Author
-
-Utkarsh Raj
-
-B.Tech Mining Engineering + Double Major in Computer Science & Engineering
-
-Indian Institute of Technology Kharagpur
-
----
-
 ## License
 
 This project is intended for educational, research, and software engineering learning purposes.
