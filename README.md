@@ -100,6 +100,21 @@ The dashboard displays:
 * Automatic in-memory fallback when MongoDB is unavailable
 
 ---
+## 📄 Technical Paper
+
+The complete IEEE-style technical paper for **OptiCore** documents the system architecture, SQL parsing pipeline, rule-based and cost-based optimization algorithms, complexity analysis, benchmarking methodology, experimental evaluation, limitations, and future work.
+
+<p align="center">
+  <a href="DiffTool_Paper.pdf">
+    <img src="pictures/DiffTool_paper.png" alt="OptiCore Technical Paper" width="680">
+  </a>
+</p>
+
+<p align="center">
+  <a href="DiffTool_Paper.pdf">
+    <strong>📄 Open the Full Technical Paper (PDF)</strong>
+  </a>
+</p>
 
 ## Technology Stack
 
