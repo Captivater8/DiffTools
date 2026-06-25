@@ -234,25 +234,7 @@ g++ -O3 -std=c++14 backend/src/main.cpp backend/src/myers.cpp backend/src/histog
 
 ---
 
-### 2. Start MongoDB
-
-Ensure MongoDB is running locally:
-
-```bash
-mongod
-```
-
-Default connection:
-
-```text
-mongodb://127.0.0.1:27017/diffproject
-```
-
-If MongoDB is unavailable, the application automatically switches to in-memory history storage.
-
----
-
-### 3. Start Backend Server
+### 2. Start Backend Server
 
 ```bash
 cd backend
@@ -268,7 +250,7 @@ http://localhost:5000
 
 ---
 
-### 4. Start Frontend Dashboard
+### 3. Start Frontend Dashboard
 
 ```bash
 cd frontend
