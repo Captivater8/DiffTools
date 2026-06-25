@@ -102,7 +102,7 @@ The dashboard displays:
 ---
 ## 📄 Technical Paper
 
-The complete IEEE-style technical paper for **OptiCore** documents the system architecture, SQL parsing pipeline, rule-based and cost-based optimization algorithms, complexity analysis, benchmarking methodology, experimental evaluation, limitations, and future work.
+The accompanying IEEE-style technical paper provides a comprehensive overview of **DiffEngine**, covering its architecture, algorithmic design, implementation details, computational complexity, system workflow, and experimental evaluation. It serves as the primary technical documentation for the project and complements the source code available in this repository.
 
 <p align="center">
   <a href="DiffTool_Paper.pdf">
