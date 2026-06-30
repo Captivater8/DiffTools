@@ -105,14 +105,12 @@ The dashboard displays:
 The accompanying IEEE-style technical paper provides a comprehensive overview of **DiffEngine**, covering its architecture, algorithmic design, implementation details, computational complexity, system workflow, and experimental evaluation. It serves as the primary technical documentation for the project and complements the source code available in this repository.
 
 <p align="center">
-  <a href="DiffTool_Paper.pdf">
     <img src="pictures/DiffTool_paper.png" alt="OptiCore Technical Paper" width="680">
-  </a>
 </p>
 
 <p align="center">
   <a href="DiffTool_Paper.pdf">
-    <strong>📄 Open the Full Technical Paper (PDF)</strong>
+    <strong>📄 Download the Full Technical Paper (PDF)</strong>
   </a>
 </p>
 
